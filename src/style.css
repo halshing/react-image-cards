@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+#root {
+  width: 400px;
+  height: 400px;
+}
+.cards-container {
+  display: inline-block;
+}
+.icon-overlay {
+  position: absolute;
+  background-color: #000000;
+  opacity: 0;
+  transition: opacity 500ms;
+}
+.icon-overlay:hover {
+  opacity: 0.5;
+}
+.icon-image {
+  float: left;
+  cursor: pointer;
+}
+.modal-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.modal-overlay.hide {
+  display: none;
+}
+.modal-content {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 100px 10px;
+  width: 600px;
+  height: 80%;
+  overflow: hidden;
+  cursor: default;
+}
+.modal-btnClose {
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 5px;
+}
+.modal-btnClose:hover {
+  color: red;
+  font-weight: bold;
+}
+.modal-body {
+  text-align: center;
+  padding: 20px;
+}
+.modal-title {
+  font-size: 25px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.modal-comments {
+  background-color: white;
+  padding: 10px 5px;
+}
