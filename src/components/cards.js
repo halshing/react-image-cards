@@ -1,23 +1,19 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
-import Card from './card';
-import Modal from './modal';
+import React, { Component } from "react";
+import { render } from "react-dom";
+import Card from "./card";
+import Modal from "./modal";
 
 class Cards extends Component {
-  state = {
-    size: 100,
-    cols: 4,
-    margin: 5
-  }
+  state = {};
 
   render() {
     const { cards, openModal } = this.props;
-    const { size, cols, margin } = this.state;
+    //const { size, cols, margin } = this.state;
 
     return (
-      <div className="cards-container" style={{ width: cols * (size + 2 * margin) }}>
+      <div className="all-cards">
         {cards.map((card, index) => (
-          <Card key={index} config={{ card, size, margin, openModal }} />
+          <Card key={index} config={{ card, openModal }} />
         ))}
       </div>
     );

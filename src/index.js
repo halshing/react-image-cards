@@ -35,10 +35,7 @@ class App extends Component {
     return (
       <div>
         <Cards cards={cards} openModal={this.modal.open} />
-        <p>
-          Click on an image! :)
-        </p>
-        <Modal options={modalOptions} isModalOpen={isModalOpen} closeModal={this.modal.close} />
+        {/* <Modal options={modalOptions} isModalOpen={isModalOpen} closeModal={this.modal.close} /> */}
       </div>
     );
   }

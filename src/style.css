@@ -5,21 +5,38 @@
   width: 400px;
   height: 400px;
 }
-.cards-container {
+.all-cards {
   display: inline-block;
+  width: 1400px;
 }
-.icon-overlay {
-  position: absolute;
-  background-color: #000000;
-  opacity: 0;
-  transition: opacity 500ms;
-}
-.icon-overlay:hover {
-  opacity: 0.5;
-}
-.icon-image {
+.card-container {
+  width: 240px;
+  height: 240px;
   float: left;
+  margin: 10px;
+  overflow: hidden;
+  background-color: yellow;
+  border-radius: 3px;
+  box-shadow: 0 0 5px;
   cursor: pointer;
+}
+.card-image {
+  max-height: 170px;
+  overflow: hidden;
+}
+.card-image img {
+  width: 100%;
+}
+.card-details {
+  position: absolute;
+}
+.card-stats {
+
+}
+.card-stats .icon.icon-upvote::before {
+  background: url('./icons/arrow-up.png');
+  content: '';
+  border: 1px solid blue;
 }
 .modal-overlay {
   top: 0;
