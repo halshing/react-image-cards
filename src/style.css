@@ -15,13 +15,12 @@
   float: left;
   margin: 10px;
   overflow: hidden;
-  background-color: yellow;
   border-radius: 3px;
   box-shadow: 0 0 5px;
   cursor: pointer;
 }
 .card-image {
-  max-height: 170px;
+  min-height: 170px;
   overflow: hidden;
 }
 .card-image img {
@@ -30,6 +29,14 @@
 .card-details {
   position: absolute;
   width: 100%;
+  padding: 10px 5px;
+  background-color: yellow;
+  border: 1px solid blue;
+  bottom: 0;
+  
+}
+.card-details .card-title {
+  /* padding-bottom: 10px; */
 }
 .card-stats {
   display: flex;
@@ -48,6 +55,7 @@
 }
 .card-stats .stat-number {
   float: left;
+  padding: 0 3px;
 }
 .card-stats .icon-upvote {
   background-image: url("./icons/arrow-up.png");
@@ -61,6 +69,12 @@
 .card-stats .icon-views {
   background-image: url("./icons/views.png");
 }
+
+
+
+
+
+/* Modal styling (to delete) */
 .modal-overlay {
   top: 0;
   left: 0;
