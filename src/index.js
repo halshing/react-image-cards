@@ -33,10 +33,10 @@ class App extends Component {
   render() {
     const { cards, modalOptions, isModalOpen } = this.state;
     return (
-      <div>
+      <React.Fragment>
         <Cards cards={cards} openModal={this.modal.open} />
         {/* <Modal options={modalOptions} isModalOpen={isModalOpen} closeModal={this.modal.close} /> */}
-      </div>
+      </React.Fragment>
     );
   }
 }

@@ -2,14 +2,14 @@
   box-sizing: border-box;
 }
 #root {
-  width: 400px;
-  height: 400px;
-}
-.all-cards {
-  display: inline-block;
   width: 1400px;
+  position: relative;
 }
 .card-container {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  position: relative;
   width: 240px;
   height: 240px;
   float: left;
@@ -29,14 +29,37 @@
 }
 .card-details {
   position: absolute;
+  width: 100%;
 }
 .card-stats {
-
+  display: flex;
 }
-.card-stats .icon.icon-upvote::before {
-  background: url('./icons/arrow-up.png');
-  content: '';
-  border: 1px solid blue;
+.card-stats .icon-container {
+  line-height: 15px;
+  padding: 3px 5px;
+  bottom: 0;
+}
+.card-stats .icon {
+  width: 15px;
+  height: 15px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  float: left;
+}
+.card-stats .stat-number {
+  float: left;
+}
+.card-stats .icon-upvote {
+  background-image: url("./icons/arrow-up.png");
+}
+.card-stats .icon-downvote {
+  background-image: url("./icons/arrow-down.png");
+}
+.card-stats .icon-comments {
+  background-image: url("./icons/comments.png");
+}
+.card-stats .icon-views {
+  background-image: url("./icons/views.png");
 }
 .modal-overlay {
   top: 0;
