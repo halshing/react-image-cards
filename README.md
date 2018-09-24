@@ -4,4 +4,4 @@
 `npm install`
 
 ### Usage
-`npm run start`. This opens your browser to `localhost:3000`.
+Run `npm start` which will open your browser to `localhost:3000`.
