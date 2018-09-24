@@ -21,7 +21,7 @@ const Card = ({ config }) => {
         <img src={card.Url} title={card.Title} />
       </div>
       <div className="card-details">
-        <div className="card-title">{card.Title}</div>
+        <div className="card-title">{card.Title.substring(0, 60)}</div>
         <div className="card-stats">
           <div className="icon-container">
             <div className="icon icon-upvote" />
