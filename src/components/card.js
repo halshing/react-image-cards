@@ -2,10 +2,8 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 
 const Card = ({ config }) => {
-  let { card, size, margin, openModal } = config;
-  return <div className="card-container" onClick={() => {
-        openModal(card);
-      }} data-image-url={card.Url} data-image-id={card.Url.substring(card.Url.lastIndexOf("/") + 1, card.Url.length).split(".")[0]}>
+  let { card } = config;
+  return <div className="card-container" data-image-url={card.Url} data-image-id={card.Url.substring(card.Url.lastIndexOf("/") + 1, card.Url.length).split(".")[0]}>
       <div className="card-image">
         <img src={card.Url} title={card.Title} />
       </div>
