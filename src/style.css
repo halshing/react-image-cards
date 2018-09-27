@@ -24,18 +24,6 @@ body {
   cursor: pointer;
   transition: opacity 0.2s;
 }
-.card-container:hover {
-  opacity: 0.5;
-}
-.card-container::before {
-  content: " ";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  /* z-index: 9999; */
-}
 .card-image {
   height: 170px;
   overflow: hidden;
@@ -65,45 +53,43 @@ body {
 .card-stats .icon-container {
   line-height: 15px;
   padding: 3px 5px;
-  bottom: 0;
-}
-.card-stat .icon-container {
-  font-weight: bold;
+  font-size: 12px;
+  color: #a0a0a0;
 }
 .card-stats .icon {
-  width: 15px;
-  height: 15px;
-  background-size: 100%;
-  background-repeat: no-repeat;
   float: left;
 }
 .card-stats .stat-number {
   float: left;
   padding: 0 5px;
 }
-.card-stats .icon-upvote .icon {
-  background-image: url("./icons/arrow-up.png");
+.card-stats .icon-upvote .icon::before {
+  font-family: "Material Icons";
+  content: "arrow_upward";
 }
 .card-stats .icon-upvote:hover {
   color: #23dd00;
 }
-.card-stats .icon-downvote .icon {
-  background-image: url("./icons/arrow-down.png");
+.card-stats .icon-downvote .icon::before {
+  font-family: "Material Icons";
+  content: "arrow_downward";
 }
 .card-stats .icon-downvote:hover {
   color: #ff2020;
 }
-.card-stats .icon-comments .icon {
-  background-image: url("./icons/comments.png");
+.card-stats .icon-comments .icon::before {
+  font-family: "Material Icons";
+  content: "sms";
 }
 .card-stats .icon-comments:hover {
   color: #ffffff;
 }
-.card-stats .icon-views .icon {
-  background-image: url("./icons/views.png");
+.card-stats .icon-views .icon::before {
+  font-family: "Material Icons";
+  content: "remove_red_eye";
 }
 .card-stats .icon-views:hover {
-  color: #ffffff;
+  color: #00A1FF;
 }
 
 /* Modal styling (to delete) */
