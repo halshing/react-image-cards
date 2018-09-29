@@ -15,7 +15,8 @@ class App extends Component {
     cards: data,
     selectedImage: {
       Url: "https://via.placeholder.com/240x135",
-      Title: "Cannot display image"
+      Title: "Cannot display image",
+      Description: "There was a problem showing this image."
     }
   };
 
