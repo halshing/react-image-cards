@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-const Card = ({ config }) => {
-  let { card } = config;
-  return <div className="card-container" data-image-url={card.Url} data-image-id={card.Url.substring(card.Url.lastIndexOf("/") + 1, card.Url.length).split(".")[0]}>
+const Card = (props) => {
+  let { card } = props.config;
+  return <div className="card-container" onClick={props.openImage}>
       <div className="card-image">
         <img src={card.Url} title={card.Title} />
       </div>
