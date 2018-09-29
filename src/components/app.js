@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
 import data from "../data.json";
 import * as routes from "../constants/routes";
 import Cards from "./cards";
@@ -8,7 +13,10 @@ import GalleryImage from "./galleryimage";
 class App extends Component {
   state = {
     cards: data,
-    selectedImage: null
+    selectedImage: {
+      Url: "https://via.placeholder.com/240x135",
+      Title: "Cannot display image"
+    }
   };
 
   openImage = (history, image) => {
@@ -18,7 +26,7 @@ class App extends Component {
     ).split(".")[0];
     history.push(`/gallery/${imageId}`);
     this.setState({ selectedImage: image });
-  }
+  };
 
   render() {
     const { cards } = this.state;
@@ -34,11 +42,16 @@ class App extends Component {
               )}
             />
             <Route
+              exact
               path={routes.GALLERY_IMAGE + "/:imageId"}
               render={props => (
-                <GalleryImage {...props} selectedImage={this.state.selectedImage} />
+                <GalleryImage
+                  {...props}
+                  selectedImage={this.state.selectedImage}
+                />
               )}
             />
+            <Route render={() => <Redirect to="/" />} />
           </Switch>
         </div>
       </Router>
