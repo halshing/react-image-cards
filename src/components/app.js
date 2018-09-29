@@ -5,14 +5,13 @@ import {
   Switch,
   Redirect
 } from "react-router-dom";
-import data from "../data.json";
 import * as routes from "../constants/routes";
 import Cards from "./cards";
 import GalleryImage from "./galleryimage";
 
 class App extends Component {
   state = {
-    cards: data,
+    cards: [],
     selectedImage: {
       Url: "https://via.placeholder.com/240x135",
       Title: "Cannot display image",
@@ -20,12 +19,23 @@ class App extends Component {
     }
   };
 
+  componentWillMount() {
+    let options = {
+      headers: new Headers({
+        Authorization: `Client-ID ${process.env.REACT_APP_IMGUR_CLIENTID}`
+      })
+    };
+    let url = "https://api.imgur.com/3/gallery/search/?q_all=cats&q_type=png";
+    let request = new Request(url, options);
+    fetch(request)
+      .then(res => res.json())
+      .then(response => {
+        this.setState({ cards: response.data });
+      });
+  }
+
   openImage = (history, image) => {
-    let imageId = image.Url.substring(
-      image.Url.lastIndexOf("/") + 1,
-      image.Url.length
-    ).split(".")[0];
-    history.push(`/gallery/${imageId}`);
+    history.push(`/gallery/${image.id}`);
     this.setState({ selectedImage: image });
   };
 

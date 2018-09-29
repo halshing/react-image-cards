@@ -6,11 +6,11 @@ class GalleryImage extends Component {
     const { selectedImage } = this.props;
     return (
       <div className="gallery-image">
-        <div className="image-title">{selectedImage.Title}</div>
+        <div className="image-title">{selectedImage.title}</div>
         <div className="image-container">
-          <img src={selectedImage.Url} alt={selectedImage.Title} />
+          <img src={selectedImage.link} alt={selectedImage.title} />
         </div>
-        <div className="image-description">{selectedImage.Description}</div>
+        <div className="image-description">{selectedImage.description}</div>
       </div>
     );
   }

@@ -64,7 +64,7 @@ body {
 }
 .card-stats .stat-number {
   float: left;
-  padding: 0 5px;
+  padding: 0 2px;
 }
 .card-stats .icon-upvote .icon::before {
   font-family: "Material Icons";
@@ -119,4 +119,5 @@ body {
 }
 .image-description {
   padding: 20px;
+  font-size: 12px;
 }

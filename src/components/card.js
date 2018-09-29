@@ -1,33 +1,35 @@
 import React, { Component } from "react";
 
-const Card = (props) => {
+const Card = props => {
   let { card } = props.config;
-  return <div className="card-container" onClick={props.openImage}>
+  return (
+    <div className="card-container" onClick={props.openImage}>
       <div className="card-image">
-        <img src={card.Url} title={card.Title} />
+        <img src={card.link} title={card.title} />
       </div>
       <div className="card-details">
-        <div className="card-title">{card.Title.substring(0, 60)}</div>
+        <div className="card-title">{card.title.substring(0, 60)}</div>
         <div className="card-stats">
           <div className="icon-container icon-upvote">
             <div className="icon" />
-            <div className="stat-number">{card.Stats.Upvotes}</div>
+            <div className="stat-number">{card.ups}</div>
           </div>
           <div className="icon-container icon-downvote">
             <div className="icon" />
-            <div className="stat-number">{card.Stats.Downvotes}</div>
+            <div className="stat-number">{card.downs}</div>
           </div>
-        <div className="icon-container icon-comments">
+          <div className="icon-container icon-comments">
             <div className="icon" />
-            <div className="stat-number">{card.Stats.Comments}</div>
+            <div className="stat-number">{card.comment_count}</div>
           </div>
-        <div className="icon-container icon-views">
+          <div className="icon-container icon-views">
             <div className="icon" />
-            <div className="stat-number">{card.Stats.Views}</div>
+            <div className="stat-number">{card.views}</div>
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
 
 export default Card;
