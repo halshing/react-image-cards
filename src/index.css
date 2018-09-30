@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #303030;
+  background-color: #202020;
 }
 #root {
   position: relative;
@@ -39,7 +39,7 @@ body {
   position: absolute;
   width: 100%;
   padding: 10px 15px;
-  background-color: #4b4b4b;
+  background-color: #424242;
   bottom: 0;
 }
 .card-details .card-title {
@@ -98,7 +98,9 @@ body {
   width: 800px;
   margin: 0 auto;
   color: #ffffff;
-  background-color: #4b4b4b;
+}
+.selectedImage {
+  background-color: #424242;
   border-radius: 3px;
 }
 .image-container {
@@ -117,4 +119,28 @@ body {
 .image-description {
   padding: 20px;
   font-size: 12px;
+}
+
+/* Image Comments */
+.comments-header {
+  padding-top: 20px;
+}
+.comment-container {
+  padding: 10px 15px;
+  margin: 20px 0;
+  background-color: #424242;
+  border-radius: 3px;
+}
+.comment-details {
+  font-size: 11px;
+  padding-bottom: 5px;
+}
+.comment-details > span {
+  padding-right: 10px;
+}
+.comment-author {
+  font-weight: bold;
+}
+.comment {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
