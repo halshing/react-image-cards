@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 
 class GalleryImage extends Component {
+  state = {
+    data: []
+  }
   render() {
-    const { imageId } = this.props.match.params;
     const { selectedImage } = this.props;
     return (
       <div className="gallery-image">

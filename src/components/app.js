@@ -31,7 +31,9 @@ class App extends Component {
       .then(res => res.json())
       .then(response => {
         this.setState({ cards: response.data });
-      });
+      }).catch(err => {
+        console.error(err);
+      })
   }
 
   openImage = (history, image) => {
@@ -43,7 +45,7 @@ class App extends Component {
     const { cards } = this.state;
     return (
       <Router>
-        <div className="app-container">
+        <div className="container-fluid app-container">
           <Switch>
             <Route
               exact

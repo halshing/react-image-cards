@@ -3,7 +3,7 @@ import React, { Component } from "react";
 const Card = props => {
   let { card } = props.config;
   return (
-    <div className="card-container" onClick={props.openImage}>
+    <div className="col-xs-12 card-container" onClick={props.openImage}>
       <div className="card-image">
         <img src={card.link} title={card.title} />
       </div>
