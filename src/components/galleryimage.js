@@ -30,7 +30,7 @@ class GalleryImage extends Component {
         <div className="selectedImage">
           <div className="image-title">{selectedImage.title}</div>
           <div className="image-container">
-            <img src={selectedImage.link} alt={selectedImage.title} />
+            <img src={selectedImage.link} alt={selectedImage.title} className="img-fluid" />
           </div>
           <div className="image-description">{selectedImage.description}</div>
         </div>

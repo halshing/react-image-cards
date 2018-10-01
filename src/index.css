@@ -95,7 +95,7 @@ body {
 /* Selected Image */
 .gallery-image {
   font-family: "Poppins", "san-serif";
-  width: 800px;
+  max-width: 800px;
   margin: 0 auto;
   color: #ffffff;
 }
@@ -106,12 +106,12 @@ body {
 .image-container {
   text-align: center;
   background-color: #000000;
-  width: 800px;
+  /* width: 800px; */
 }
 .image-container img {
   display: block;
   margin: 0 auto;
-  max-width: 100%;
+  /* max-width: 100%; */
 }
 .image-title {
   padding: 20px;
